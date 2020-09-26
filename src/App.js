@@ -32,6 +32,18 @@ function App () {
         <li>
           <div className="text">2X Savings</div>
         </li>
+        <li>
+          <div className="text">Laptop</div>
+        </li>
+        <li>
+          <div className="text">Iphone</div>
+        </li>
+        <li>
+          <div className="text">TV</div>
+        </li>
+        <li>
+          <div className="text">Try Next Time</div>
+        </li>
       </ul>
       <button className="spin-button">SPIN</button>
       <h1>Spin the Wheel now to get the Rewards</h1>
