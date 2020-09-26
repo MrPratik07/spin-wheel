@@ -1,13 +1,31 @@
 import React from 'react';
 import './App.css';
 
-
-function App () {
+class App extends React.Component {
+  state = {
+    name : "circle"
+  }
+//start Rotation
+  startRotation = () => {
+    this.setState ({
+      name : "circle start-rotate"
+    });
+  
+//stop Rotation    
+  setTimeout (() => {
+    this.setState({
+        name: "circle start-rotate stop-rotate"
+    });
+  }, Math.floor(Math.random()*10000) + 1);  
+    
+  }
+  
+  render () {
   return (
    <div>
    <div className="arrow"></div>
       
-      <ul className="circle">
+      <ul className= {this.state.name}>
         <li>
           <div className="text">₹50 Cash</div>
         </li>
@@ -45,11 +63,11 @@ function App () {
           <div className="text">Try Next Time</div>
         </li>
       </ul>
-      <button className="spin-button">SPIN</button>
+      <button className="spin-button" onClick = {this.startRotation}>SPIN</button>
       <h1>Spin the Wheel now to get the Rewards</h1>
    </div>
   );
 }
-
+};
 
 export default App;
